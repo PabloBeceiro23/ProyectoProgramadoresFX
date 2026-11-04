@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="300.0" styleClass="fondo-registro" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectoprogramadores.controladores.RegistroController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="300.0" layoutX="61.0" layoutY="83.0" opacity="0.2" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../../images/fondo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="43.0" layoutX="21.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/addUser.png" />
+         </image></ImageView>
+      <Label layoutX="110.0" layoutY="41.0" text="Registro de usuario" />
+      <Label layoutX="12.0" layoutY="93.0" text="Nombre de usuario" />
+      <TextField fx:id="textFieldUsuario" layoutX="130.0" layoutY="89.0" />
+      <Label layoutX="12.0" layoutY="137.0" text="Contraseña" />
+      <PasswordField fx:id="passwordFieldContrasena" layoutX="130.0" layoutY="133.0" />
+      <Label layoutX="12.0" layoutY="211.0" text="Género" />
+      <RadioButton fx:id="radioButtonHombre" layoutX="128.0" layoutY="191.0" mnemonicParsing="false" text="Hombre">
+         <toggleGroup>
+            <ToggleGroup fx:id="grupoOpciones" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radioButtonMujer" layoutX="128.0" layoutY="219.0" mnemonicParsing="false" text="Mujer" toggleGroup="$grupoOpciones" />
+      <RadioButton fx:id="radioButtonMujer1" layoutX="128.0" layoutY="247.0" mnemonicParsing="false" text="Prefiero no decirlo" toggleGroup="$grupoOpciones" />
+      <Label layoutX="12.0" layoutY="281.0" prefHeight="34.0" prefWidth="103.0" text="Lenguaje de programacion" wrapText="true" />
+      <ComboBox fx:id="idComboBox" layoutX="130.0" layoutY="286.0" prefWidth="150.0" />
+      <Button fx:id="buttonRegistrar" layoutX="38.0" layoutY="343.0" mnemonicParsing="false" text="Registrar" />
+      <Button fx:id="buttonRegistrar1" layoutX="161.0" layoutY="343.0" mnemonicParsing="false" text="Volver al inicio" />
+   </children>
+</AnchorPane>
