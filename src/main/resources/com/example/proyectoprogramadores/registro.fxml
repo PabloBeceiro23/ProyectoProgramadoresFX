@@ -17,20 +17,20 @@
          </image></ImageView>
       <Label layoutX="110.0" layoutY="41.0" text="Registro de usuario" />
       <Label layoutX="12.0" layoutY="93.0" text="Nombre de usuario" />
-      <TextField fx:id="textFieldUsuario" layoutX="130.0" layoutY="89.0" />
+      <TextField fx:id="txtNombreRegistro" layoutX="130.0" layoutY="89.0" />
       <Label layoutX="12.0" layoutY="137.0" text="Contraseña" />
-      <PasswordField fx:id="passwordFieldContrasena" layoutX="130.0" layoutY="133.0" />
+      <PasswordField fx:id="txtPasswordRegistro" layoutX="130.0" layoutY="133.0" />
       <Label layoutX="12.0" layoutY="211.0" text="Género" />
-      <RadioButton fx:id="radioButtonHombre" layoutX="128.0" layoutY="191.0" mnemonicParsing="false" text="Hombre">
+      <RadioButton fx:id="rbHombre" layoutX="128.0" layoutY="191.0" mnemonicParsing="false" text="Hombre">
          <toggleGroup>
             <ToggleGroup fx:id="grupoOpciones" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="radioButtonMujer" layoutX="128.0" layoutY="219.0" mnemonicParsing="false" text="Mujer" toggleGroup="$grupoOpciones" />
-      <RadioButton fx:id="radioButtonMujer1" layoutX="128.0" layoutY="247.0" mnemonicParsing="false" text="Prefiero no decirlo" toggleGroup="$grupoOpciones" />
+      <RadioButton fx:id="rbMujer" layoutX="128.0" layoutY="219.0" mnemonicParsing="false" text="Mujer" toggleGroup="$grupoOpciones" />
+      <RadioButton fx:id="rbPrefieroNoDecirlo" layoutX="128.0" layoutY="247.0" mnemonicParsing="false" text="Prefiero no decirlo" toggleGroup="$grupoOpciones" />
       <Label layoutX="12.0" layoutY="281.0" prefHeight="34.0" prefWidth="103.0" text="Lenguaje de programacion" wrapText="true" />
-      <ComboBox fx:id="idComboBox" layoutX="130.0" layoutY="286.0" prefWidth="150.0" />
-      <Button fx:id="buttonRegistrar" layoutX="38.0" layoutY="343.0" mnemonicParsing="false" text="Registrar" />
+      <ComboBox fx:id="cbLenguajeRegistro" layoutX="130.0" layoutY="286.0" prefWidth="150.0" />
+      <Button fx:id="btnRegistrar" layoutX="38.0" layoutY="343.0" mnemonicParsing="false" onAction="#botonRegistrar" text="Registrar" />
       <Button fx:id="btnIrLogin" layoutX="161.0" layoutY="343.0" mnemonicParsing="false" onAction="#volverAlInicio" text="Volver al inicio" />
    </children>
 </AnchorPane>

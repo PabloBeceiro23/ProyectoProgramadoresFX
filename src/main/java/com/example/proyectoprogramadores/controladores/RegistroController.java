@@ -5,8 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,6 +15,14 @@ public class RegistroController {
     private ComboBox<String> idComboBox;
     @FXML
     private Button btnIrLogin;
+    @FXML
+    private TextField txtNombreRegistro;
+    @FXML
+    private TextField txtPasswordRegistro;
+    @FXML
+    private ToggleGroup grupoOpciones;
+
+
 
     @FXML
     public void initialize() {
@@ -31,5 +38,18 @@ public class RegistroController {
         stage.setScene(new Scene(root));
         stage.sizeToScene();
         stage.centerOnScreen();
+    }
+
+    public void botonRegistrar(ActionEvent actionEvent) {
+
+        String usuario = txtNombreRegistro.getText();
+        String password = txtPasswordRegistro.getText();
+        RadioButton seleccionado = (RadioButton) grupoOpciones.getSelectedToggle();
+
+        if (seleccionado != null) {
+            String genero = seleccionado.getText();   // "Hombre" o "Mujer"
+        }
+
+        String lenguajeProgramacion = idComboBox.getValue();
     }
 }
