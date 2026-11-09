@@ -5,10 +5,13 @@ import com.db4o.ObjectSet;
 import com.example.proyectoprogramadores.entity.Programador;
 import com.example.proyectoprogramadores.util.ConexionBBDD;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class inicioDAO {
 
     // se busca programadores por su lenguaje de programacion
-    public ObjectSet filtrarPorLenguaje(String lenguaje) {
+    public ArrayList<Programador> filtrarPorLenguaje(String lenguaje) {
         ConexionBBDD conexionBBDD = new ConexionBBDD();
 
         ObjectContainer oc = conexionBBDD.abrirConexion();
@@ -17,7 +20,8 @@ public class inicioDAO {
         programador.setLenguaje(lenguaje);
 
         ObjectSet<Programador> listaProgramadores = oc.queryByExample(programador);
+        oc.close();
 
-        return listaProgramadores;
+        return new ArrayList<>(listaProgramadores);
     }
 }

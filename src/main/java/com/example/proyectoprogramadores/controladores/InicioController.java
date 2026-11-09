@@ -1,6 +1,9 @@
 package com.example.proyectoprogramadores.controladores;
 
+import com.example.proyectoprogramadores.DAO.inicioDAO;
 import com.example.proyectoprogramadores.entity.Programador;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,9 +13,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class InicioController {
 
@@ -35,6 +40,10 @@ public class InicioController {
     public void initialize() {
         idComboBox.getItems().addAll("Todos","Java", "Python", "JavaScript");
         idComboBox.getSelectionModel().selectFirst();
+
+        colUsuario.setCellValueFactory(new PropertyValueFactory<>("usuario"));
+        colGenero.setCellValueFactory(new PropertyValueFactory<>("genero"));
+        colLenguaje.setCellValueFactory(new PropertyValueFactory<>("lenguaje"));
     }
 
 
@@ -55,6 +64,17 @@ public class InicioController {
     }
 
     public void filtrarPorLenguaje(ActionEvent actionEvent) {
+
+        inicioDAO dao = new inicioDAO();
+        // se crea un arraylist de programadores segun lenguaje de programacion seleccionado
+        ArrayList<Programador>  listaProgramadores = dao.filtrarPorLenguaje(idComboBox.getValue());
+
+        ObservableList<Programador> datos = FXCollections.observableArrayList(listaProgramadores);
+        tablaProgramadores.setItems(datos);
+
+
+
+
 
     }
 }
