@@ -14,5 +14,7 @@ public class Programador {
 
     private String usuario;
     private String password;
+    private String genero;
+    private String lenguaje;
 
 }

@@ -35,7 +35,7 @@ public class LoginController {
     }
 
     // logica del boton login
-    public void botonLogin(ActionEvent actionEvent) {
+    public void botonLogin(ActionEvent actionEvent) throws IOException {
 
         String usuario = txtUsuarioLogin.getText().trim();
         String password = txtPasswordLogin.getText().trim();
@@ -87,25 +87,38 @@ public class LoginController {
             programador.setPassword(password);
 
             if(loginDAO.login(programador)){
-                // cambiar de ventana al inicio
+                cambiarVentana("/com/example/proyectoprogramadores/inicio.fxml");
             } else {
-                labelMensajeError.setText("Programador no encontrado");
+                ventanaEmergenteError("Registrar programador", "Programador no encontrado");
             }
         } else {
-            labelMensajeError.setText(mensajeError);
+            ventanaEmergenteError("Iniciar sesion", mensajeError);
         }
 
     }
 
 
     public void botonRegistrarse(ActionEvent actionEvent) throws IOException {
+        cambiarVentana("/com/example/proyectoprogramadores/registro.fxml");
+    }
+
+    public void cambiarVentana(String ruta) throws IOException {
         FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/com/example/proyectoprogramadores/registro.fxml"));
+                getClass().getResource(ruta));
         Parent root = loader.load();
 
         Stage stage = (Stage) buttonRegistro.getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.sizeToScene();
         stage.centerOnScreen();
+
+    }
+
+    public void ventanaEmergenteError(String tituloVentana, String mensaje) {
+        Alert alerta = new Alert(Alert.AlertType.ERROR);
+        alerta.setTitle(tituloVentana);
+        alerta.setHeaderText(null);   // sin cabecera
+        alerta.setContentText(mensaje);
+        alerta.showAndWait();
     }
 }
