@@ -4,7 +4,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="300.0" styleClass="fondo-registro" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectoprogramadores.controladores.RegistroController">
+<AnchorPane prefHeight="400.0" prefWidth="300.0" styleClass="fondo-registro" stylesheets="@../../../styles/botonesTitulos.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectoprogramadores.controladores.RegistroController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="300.0" layoutX="61.0" layoutY="83.0" opacity="0.2" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
@@ -15,7 +15,7 @@
          <image>
             <Image url="@../../../images/addUser.png" />
          </image></ImageView>
-      <Label layoutX="110.0" layoutY="41.0" text="Registro de usuario" />
+      <Label id="titulo" layoutX="110.0" layoutY="41.0" text="Registro de usuario" />
       <Label layoutX="12.0" layoutY="93.0" text="Nombre de usuario" />
       <TextField fx:id="txtNombreRegistro" layoutX="130.0" layoutY="89.0" />
       <Label layoutX="12.0" layoutY="137.0" text="Contraseña" />
@@ -30,7 +30,7 @@
       <RadioButton fx:id="rbPrefieroNoDecirlo" layoutX="128.0" layoutY="247.0" mnemonicParsing="false" text="Prefiero no decirlo" toggleGroup="$grupoOpciones" />
       <Label layoutX="12.0" layoutY="281.0" prefHeight="34.0" prefWidth="103.0" text="Lenguaje de programacion" wrapText="true" />
       <ComboBox fx:id="idComboBox" layoutX="130.0" layoutY="286.0" prefWidth="150.0" />
-      <Button fx:id="btnRegistrar" layoutX="38.0" layoutY="343.0" mnemonicParsing="false" onAction="#botonRegistrar" text="Registrar" />
-      <Button fx:id="btnIrLogin" layoutX="161.0" layoutY="343.0" mnemonicParsing="false" onAction="#volverAlInicio" text="Volver al inicio" />
+      <Button fx:id="btnRegistrar" layoutX="38.0" layoutY="343.0" mnemonicParsing="false" onAction="#botonRegistrar" styleClass="botones" text="Registrar" />
+      <Button fx:id="btnIrLogin" layoutX="161.0" layoutY="343.0" mnemonicParsing="false" onAction="#volverAlInicio" styleClass="botones" text="Volver al inicio" />
    </children>
 </AnchorPane>
