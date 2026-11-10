@@ -14,7 +14,31 @@
         <junit.version>5.12.1</junit.version>
     </properties>
 
+
+
     <dependencies>
+
+        <dependency>
+            <groupId>com.db4o</groupId>
+            <artifactId>db4o-all</artifactId>
+            <version>8.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/db4o.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.librepdf</groupId>
+            <artifactId>openpdf</artifactId>
+            <version>1.3.39</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.4.1</version>
+        </dependency>
+
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

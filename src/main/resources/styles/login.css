@@ -1,0 +1,105 @@
+/* ===== Login: Comunidad de programadores =====
+   Paleta
+   fondo      #1b2030
+   campo      #262c40
+   borde      #3a4260
+   texto      #e6e9f2
+   texto tenue #8d96ad
+   acento     #7aa2f7
+   error      #f7768e
+*/
+
+/* Quita el resplandor azul por defecto del foco; lo sustituimos por nuestro borde */
+.root-login {
+    -fx-background-color: #1b2030;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-font-family: "Consolas", "Courier New", monospace;
+}
+
+/* Título */
+.titulo {
+    -fx-text-fill: #e6e9f2;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
+/* Etiquetas Usuario / Contraseña */
+.etiqueta {
+    -fx-text-fill: #8d96ad;
+    -fx-font-size: 13px;
+}
+
+/* TextField y PasswordField */
+.campo {
+    -fx-background-color: #262c40;
+    -fx-background-radius: 4;
+    -fx-border-color: #3a4260;
+    -fx-border-radius: 4;
+    -fx-border-width: 1;
+    -fx-text-fill: #e6e9f2;
+    -fx-prompt-text-fill: #5d6680;
+    -fx-highlight-fill: #7aa2f7;
+    -fx-highlight-text-fill: #1b2030;
+    -fx-font-size: 13px;
+    -fx-padding: 6 8 6 8;
+}
+
+.campo:focused {
+    -fx-border-color: #7aa2f7;
+}
+
+/* Botones (base) */
+.boton {
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-width: 1;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 7 12 7 12;
+    -fx-cursor: hand;
+}
+
+/* Login: acción principal */
+.boton-primario {
+    -fx-background-color: #7aa2f7;
+    -fx-border-color: #7aa2f7;
+    -fx-text-fill: #1b2030;
+}
+
+.boton-primario:hover {
+    -fx-background-color: #94b4fa;
+    -fx-border-color: #94b4fa;
+}
+
+.boton-primario:pressed {
+    -fx-background-color: #5f87dd;
+    -fx-border-color: #5f87dd;
+}
+
+/* Registrarse: acción secundaria */
+.boton-secundario {
+    -fx-background-color: transparent;
+    -fx-border-color: #3a4260;
+    -fx-text-fill: #e6e9f2;
+}
+
+.boton-secundario:hover {
+    -fx-border-color: #7aa2f7;
+    -fx-text-fill: #7aa2f7;
+}
+
+.boton-secundario:pressed {
+    -fx-background-color: #262c40;
+}
+
+/* Borde visible al navegar con teclado */
+.boton:focused {
+    -fx-border-color: #e6e9f2;
+}
+
+/* Mensajes de validación */
+.mensaje-error {
+    -fx-text-fill: #f7768e;
+    -fx-font-size: 12px;
+}

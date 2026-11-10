@@ -19,9 +19,28 @@ public class inicioDAO {
         Programador programador = new Programador();
         programador.setLenguaje(lenguaje);
 
+        ArrayList<Programador> listaP =  new ArrayList<>();
+
         ObjectSet<Programador> listaProgramadores = oc.queryByExample(programador);
+
+        listaP.addAll(listaProgramadores);
+
         oc.close();
 
-        return new ArrayList<>(listaProgramadores);
+        return listaP;
     }
+    // lista todos los programadores de la bbdd
+    public ArrayList<Programador> listarProgramadores() {
+        ConexionBBDD conexionBBDD = new ConexionBBDD();
+
+        ObjectContainer oc = conexionBBDD.abrirConexion();
+        Programador programador = new Programador();
+        ArrayList<Programador> listaP =  new ArrayList<>();
+        ObjectSet<Programador> listaProgramadores = oc.queryByExample(programador);
+        listaP.addAll(listaProgramadores);
+        oc.close();
+        return listaP;
+
+    }
+
 }

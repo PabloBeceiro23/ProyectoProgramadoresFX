@@ -5,6 +5,7 @@ import com.example.proyectoprogramadores.entity.Programador;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -18,9 +19,6 @@ public class LoginController {
     private TextField txtUsuarioLogin;
     @FXML
     private PasswordField txtPasswordLogin;
-    @FXML
-    private Label labelMensajeError;
-
     @FXML
     private Button buttonRegistro;
 
@@ -103,6 +101,15 @@ public class LoginController {
     }
 
     public void cambiarVentana(String ruta) throws IOException {
+//        FXMLLoader loader = new FXMLLoader(getClass().getResource(ruta));
+//        Scene scene = new Scene(loader.load());
+//        Stage stage = (Stage) ((Node)evento.getSource()).getScene().getWindow();
+//
+//        stage.setTitle("titulo!");
+//        stage.setScene(scene);
+//        stage.setResizable(false);   // no redimensionable
+//        stage.show();
+
         FXMLLoader loader = new FXMLLoader(
                 getClass().getResource(ruta));
         Parent root = loader.load();
@@ -111,6 +118,10 @@ public class LoginController {
         stage.setScene(new Scene(root));
         stage.sizeToScene();
         stage.centerOnScreen();
+
+
+
+
 
     }
 
