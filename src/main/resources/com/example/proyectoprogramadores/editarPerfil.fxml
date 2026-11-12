@@ -21,22 +21,22 @@
    <Label layoutX="30.0" layoutY="130.0" text="Contraseña" />
    <Label layoutX="30.0" layoutY="175.0" text="Género" />
    <Label layoutX="30.0" layoutY="247.0" prefHeight="41.0" prefWidth="114.0" text="Lenguaje de programación" wrapText="true" />
-   <Button layoutX="23.0" layoutY="303.0" mnemonicParsing="false" styleClass="botones" text="💾 Guardar" />
+   <Button layoutX="23.0" layoutY="303.0" mnemonicParsing="false" onAction="#guardarDatos" styleClass="botones" text="💾 Guardar" />
    <Button layoutX="113.0" layoutY="303.0" mnemonicParsing="false" styleClass="botones" text="Cancelar" />
    <ImageView fitHeight="110.0" fitWidth="114.0" layoutX="305.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../images/engranaje.png" />
       </image>
    </ImageView>
-   <TextField layoutX="144.0" layoutY="93.0" />
-   <PasswordField layoutX="144.0" layoutY="126.0" />
+   <TextField fx:id="idUsuario" disable="true" layoutX="144.0" layoutY="93.0" />
+   <PasswordField fx:id="idPassword" layoutX="144.0" layoutY="126.0" />
    <RadioButton layoutX="144.0" layoutY="158.0" mnemonicParsing="false" text="Hombre">
       <toggleGroup>
-         <ToggleGroup fx:id="genero" />
+         <ToggleGroup fx:id="opcionesGenero" />
       </toggleGroup>
    </RadioButton>
-   <RadioButton layoutX="144.0" layoutY="183.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="74.0" text="Mujer" toggleGroup="$genero" />
-   <RadioButton layoutX="144.0" layoutY="208.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="74.0" text="Mujer" toggleGroup="$genero" />
+   <RadioButton layoutX="144.0" layoutY="183.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="74.0" text="Mujer" toggleGroup="$opcionesGenero" />
+   <RadioButton layoutX="144.0" layoutY="208.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="74.0" text="Mujer" toggleGroup="$opcionesGenero" />
    <ComboBox fx:id="idComboBox" layoutX="144.0" layoutY="255.0" prefWidth="150.0" />
 
 </AnchorPane>

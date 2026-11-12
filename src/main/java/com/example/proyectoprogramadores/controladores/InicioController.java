@@ -24,6 +24,8 @@ public class InicioController {
     @FXML
     private ComboBox<String> idComboBox;
 
+    private Programador programadorActivo;
+
     @FXML
     private Button botonCerrarSesion;
 
@@ -134,5 +136,9 @@ public class InicioController {
         } else {
             ventanaEmergenteError("Error al crear excel");
         }
+    }
+
+    public void cambiarVentanaEditarPerfil(ActionEvent actionEvent) throws IOException {
+        cambiarVentana("/com/example/proyectoprogramadores/editarPerfil.fxml");
     }
 }

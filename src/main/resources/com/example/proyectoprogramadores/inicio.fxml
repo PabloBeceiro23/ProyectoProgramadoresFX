@@ -35,7 +35,7 @@
             <TableColumn fx:id="colLenguaje" prefWidth="126.66665649414062" text="Lenguaje" />
         </columns>
       </TableView>
-      <Button layoutX="39.0" layoutY="299.0" mnemonicParsing="false" styleClass="botones" text="Editar perfil" />
+      <Button layoutX="39.0" layoutY="299.0" mnemonicParsing="false" onAction="#cambiarVentanaEditarPerfil" styleClass="botones" text="Editar perfil" />
       <Button layoutX="287.0" layoutY="299.0" mnemonicParsing="false" onAction="#generarExcel" styleClass="botones" text="Excel" />
       <Button layoutX="347.0" layoutY="299.0" mnemonicParsing="false" onAction="#generarPDF" styleClass="botones" text="PDF" />
    </children>

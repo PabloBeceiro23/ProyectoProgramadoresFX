@@ -2,6 +2,7 @@ package com.example.proyectoprogramadores.controladores;
 
 import com.example.proyectoprogramadores.DAO.loginDAO;
 import com.example.proyectoprogramadores.entity.Programador;
+import com.example.proyectoprogramadores.entity.Sesion;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,9 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-
 import java.io.IOException;
-import java.util.Locale;
 
 public class LoginController {
     @FXML
@@ -83,6 +82,9 @@ public class LoginController {
             Programador programador = new Programador();
             programador.setUsuario(usuario);
             programador.setPassword(password);
+
+            // se pasa a la clase sesion el programador para saber en todo momento que programador tiene iniciada la sesion
+            Sesion.setProgramador(programador);
 
             if(loginDAO.login(programador)){
                 cambiarVentana("/com/example/proyectoprogramadores/inicio.fxml");
